@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #222222;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .logo {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #d62839;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="Help Shop Logo" class="logo">
+  <h1>Добро пожаловать в Help Shop!</h1>
+  <p>Я помогу тебе с учёбой. Просто нажми кнопку ниже!</p>
+  <button class="btn" onclick="onBuy()">Купить помощь</button>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+
+    function onBuy() {
+      tg.showAlert("Функция оплаты скоро появится \u2728");
+      // Здесь можно вызвать tg.sendData(), tg.close(), или отправить запрос на сервер
+    }
+  </script>
+</body>
+</html>
